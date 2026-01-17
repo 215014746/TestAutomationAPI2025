@@ -9,4 +9,26 @@ public class TestimonialsPayload {
         loginUser.put("password", password);
         return loginUser;
     }
+
+    public JSONObject createTestimonialPayload(String title, String content, String rating, Boolean isPublic) {
+        JSONObject createTestimonial = new JSONObject();
+        createTestimonial.put("title", title);
+        createTestimonial.put("content", content);
+        createTestimonial.put("rating", rating);
+        createTestimonial.containsValue(isPublic);
+
+        return createTestimonial;
+    }
+
+    public JSONObject updateTestimonialPayload(String title, String content, String rating, Boolean isPublic) {
+        JSONObject updateTestimonial = new JSONObject();
+        updateTestimonial.put("title", title);
+        updateTestimonial.put("content", content);
+        updateTestimonial.put("rating", rating);
+        updateTestimonial.containsValue(isPublic);
+
+        return updateTestimonial;
+    }
+
+
 }
